@@ -35,14 +35,42 @@ export const useQuizStore = defineStore({
         ],
         selected: null
       }
-    ]
+    ],
+    quizCompleted: false,
+    currentQuestion: 0
   }),
   getters: {
-    doubleCount: (state) => state.counter * 2
+    doubleCount: (state) => state.counter * 2,
+    score: (state) => {
+      let value = 0
+      state.questions.map(q => {
+        if (q.selected != null && q.answer == q.selected) {
+          console.log('correct');
+          value++
+        }
+      })
+      return value
+    },
+    getCurrentQuestion: (state) => {
+      let question = state.questions[state.currentQuestion]
+      question.index = state.currentQuestion
+      return question
+    }
   },
   actions: {
     increment() {
       this.counter++
+    },
+    setAnswer(e) {
+      this.questions[this.currentQuestion].selected = e.target.value
+      e.target.value = null
+    },
+    nextQuestion() {
+      if (this.currentQuestion < this.questions.length - 1) {
+        this.currentQuestion++
+        return
+      }  
+      this.quizCompleted = true
     }
   }
 })
