@@ -1,6 +1,9 @@
 <script setup>
 import { useQuizStore } from '@/stores/quiz'
 const quizStore = useQuizStore()
+quizStore.getUser();
+quizStore.getQuiz();
+quizStore.getQuestions();
 </script>
 
 <template>
