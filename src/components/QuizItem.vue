@@ -10,10 +10,10 @@
 
 			<div class="mb-7">
 				<label v-for="(option, index) in quizStore.getCurrentQuestion.options" :for="'option' + index"
-					:key="index" :class="`m-3 p-3 block bg-blue-100 rounded-md cursor-pointer ${quizStore.getCurrentQuestion.selected == index
+					:key="index" :class="`m-3 p-3 block bg-blue-200 rounded-md cursor-pointer ${quizStore.getCurrentQuestion.selected == index
 						? index == quizStore.getCurrentQuestion.answer
-							? 'bg-green-700'
-							: 'bg-red-400'
+							? 'bg-green-700 text-white'
+							: 'bg-red-400 text-white'
 						: ''
 					} ${quizStore.getCurrentQuestion.selected != null &&
 						index != quizStore.getCurrentQuestion.selected
