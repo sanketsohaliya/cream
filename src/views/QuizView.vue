@@ -1,5 +1,4 @@
 <template>
-  <h1>This is a single quiz</h1>
   <QuizItem />
 </template>
 
