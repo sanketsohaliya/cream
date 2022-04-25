@@ -1,8 +1,7 @@
 <template>
-  <nav class="bg-white p-3 shadow-md">
+  <nav class="bg-white shadow-md">
     <RouterLink to="/" class="flex justify-center items-center">
-      <img src="@/assets/logo.svg" class="h-9" alt="Connect Logo" />
-      <span class="text-xl font-semibold">Connect.</span>
+      <img src="@/assets/logo.png" class="h-16" alt="Cream Logo" />
     </RouterLink>
   </nav>
   <RouterView />

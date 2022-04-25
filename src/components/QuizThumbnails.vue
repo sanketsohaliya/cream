@@ -6,6 +6,8 @@
                 <QuizThumbnail />
                 <QuizThumbnail />
                 <QuizThumbnail />
+                <QuizThumbnail />
+                <QuizThumbnail />
             </div>
         </div>
     </section>
