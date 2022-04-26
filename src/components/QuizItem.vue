@@ -49,7 +49,6 @@ import { useQuizStore } from '@/stores/quiz'
 import { useRoute } from "vue-router";
 const route = useRoute();
 const id = route.params.id;
-const quizStore = useQuizStore()
-quizStore.getUser();
+const quizStore = useQuizStore();
 quizStore.getQuiz(id);
 </script>
