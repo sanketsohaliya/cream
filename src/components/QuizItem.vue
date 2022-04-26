@@ -1,10 +1,12 @@
 <template>
 	<main>
-		<section class="p-3 m-6 rounded-md bg-white" v-if="!quizStore.quizCompleted">
+		<section class="p-3 m-5 rounded-md bg-white" v-if="!quizStore.quizCompleted">
 			<div class="text-center">
-				<h1>{{ quizStore.getCurrentQuestion.question }}</h1>
+				<h1 class="text-xl font-semibold">{{ quizStore.getCurrentQuestion.question }}</h1>
 			</div>
-
+			<div class="flex justify-center items-center m-7">
+				<img class="w-96 rounded-xl shadow-lg" :src="quizStore.quiz.image" alt="blog" />
+			</div>
 			<div class="mb-7">
 				<label v-for="(option, index) in quizStore.getCurrentQuestion.options" :for="'option' + index"
 					:key="index" :class="`m-3 p-3 block bg-blue-200 rounded-md cursor-pointer ${quizStore.getCurrentQuestion.selected == index
