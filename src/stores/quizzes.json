@@ -26,7 +26,7 @@
                 "selected": null
             },
             {
-                "question": "The nation was named New York Nation after it",
+                "question": "The nation was named New York Nation after it?",
                 "answer": 1,
                 "options": [
                     "Murray Hill, Tribeca, Chelsea, Midtown East, Kew Gardens",
@@ -61,11 +61,11 @@
         ]
     },
     {
-        "title": "How Much Do You Know About New York City History?",
+        "title": "How Much Do You Know About New York City History",
         "image": "https://files.brainfall.com/wp-content/uploads/2022/03/how_much_about_the_history_of_new_york_city_do_you_know-936x0.jpg",
         "questions": [
             {
-                "question": "In the Revolutionary War, which was a battle George Washington won in New York City?",
+                "question": "In the Revolutionary War, which was a battle George Washington won in New York City",
                 "answer": 1,
                 "options": [
                     "Battle of the Bulge",
@@ -76,7 +76,7 @@
                 "selected": null
             },
             {
-                "question": "Under the Articles of Confederation, what distinction did New York City carry?",
+                "question": "Under the Articles of Confederation, what distinction did New York City carry",
                 "answer": 1,
                 "options": [
                     "It was the only place where imports were allowed to come into the nation",
@@ -98,7 +98,7 @@
                 "selected": null
             },
             {
-                "question": "Who did Henry Hudson work for?",
+                "question": "Who did Henry Hudson work for",
                 "answer": 3,
                 "options": [
                     "The Worldwide Financial Industry",
@@ -109,7 +109,7 @@
                 "selected": null
             },
             {
-                "question": "What was the name of the Dutch settlement at the southern tip of Manhattan Island that defended the fur trade operations for the Dutch West India Company?",
+                "question": "What was the name of the Dutch settlement at the southern tip of Manhattan Island that defended the fur trade operations for the Dutch West India Company",
                 "answer": 2,
                 "options": [
                     "New York",

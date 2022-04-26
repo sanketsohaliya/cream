@@ -2,12 +2,12 @@
     <section class="text-gray-600">
         <div class="container mx-auto">
             <div class="flex flex-wrap mx-3">
-                <QuizThumbnail />
-                <QuizThumbnail />
-                <QuizThumbnail />
-                <QuizThumbnail />
-                <QuizThumbnail />
-                <QuizThumbnail />
+                <QuizThumbnail id="1" />
+                <QuizThumbnail id="0" />
+                <QuizThumbnail id="1" />
+                <QuizThumbnail id="1" />
+                <QuizThumbnail id="0" />
+                <QuizThumbnail id="0" />
             </div>
         </div>
     </section>
