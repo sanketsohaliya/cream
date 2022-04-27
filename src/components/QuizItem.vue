@@ -8,7 +8,8 @@
 				<h1 class="text-xl font-semibold mt-5">{{ quizStore.getCurrentQuestion.question }}</h1>
 			</div>
 			<div class="flex justify-center items-center m-7" v-if="quizStore.getCurrentQuestion.image">
-				<img class="w-96 rounded-xl shadow-lg" :src="quizStore.getCurrentQuestion.image" alt="Question Thumbnail" />
+				<img class="w-96 rounded-xl shadow-lg" :src="quizStore.getCurrentQuestion.image"
+					alt="Question Thumbnail" />
 			</div>
 			<div class="mb-7">
 				<label v-for="(option, index) in quizStore.getCurrentQuestion.options" :for="'option' + index"
@@ -40,7 +41,7 @@
 									: 'Next question'
 					}}
 				</button>
-				<span class="text-xl font-semibold mr-4 text-gray-500">Score {{ quizStore.score }}/{{ quizStore.quiz.questions.length }}</span>
+				<span class="text-xl font-semibold mr-4">Score {{ quizStore.score }}/{{ quizStore.quiz.questions.length }}</span>
 			</div>
 		</section>
 
