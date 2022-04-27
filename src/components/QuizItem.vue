@@ -45,7 +45,8 @@
 			</div>
 		</section>
 
-		<section v-else>
+		<section class="p-3 m-5 rounded-md bg-white" v-else>
+
 			<h2>You have finished the quiz!</h2>
 			<p>Your score is {{ quizStore.score }}/{{ quizStore.quiz.questions.length }}</p>
 		</section>
