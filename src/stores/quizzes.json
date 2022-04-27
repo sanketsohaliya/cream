@@ -1,6 +1,7 @@
 [
     {
         "title": "How Much Do You Know About New York City History?",
+        "category": "History",
         "image": "https://files.brainfall.com/wp-content/uploads/2022/03/how_much_about_the_history_of_new_york_city_do_you_know-936x0.jpg.webp",
         "questions": [
             {
@@ -67,7 +68,8 @@
     },
     {
         "title": "Do You Know All These Popular Corporate Logos?",
-        "image": "https://files.brainfall.com/wp-content/uploads/2021/03/do_you_know_all_these_popular_corporate_logos-300x0.jpg.webp",
+        "image": "https://files.brainfall.com/wp-content/uploads/2021/03/do_you_know_all_these_popular_corporate_logos-936x0.jpg.webp",
+        "category": "General Knowledge",
         "questions": [
             {
                 "question": "Can you name this corporate logo of a U.S.-based airline?",
@@ -133,7 +135,8 @@
     },
     {
         "title": "The World’s Easiest Quiz",
-        "image": "https://files.brainfall.com/wp-content/uploads/2021/02/the_worlds_easiest_quiz_featured-300x0.jpg.webp",
+        "image": "https://files.brainfall.com/wp-content/uploads/2021/02/the_worlds_easiest_quiz_featured-936x0.jpg.webp",
+        "category": "Fun Trivia",
         "questions": [
             {
                 "question": "True or False: The four main directions of a compass (North, East, West, South) were the inspiration for the origination of the word 'News.'",
@@ -197,7 +200,8 @@
     },
     {
         "title": "Who Was President When…?",
-        "image": "https://files.brainfall.com/wp-content/uploads/2021/02/president1-0x200.jpg.webp",
+        "image": "https://files.brainfall.com/wp-content/uploads/2015/10/whats_your_american_holiday_iq_featured_large-936x0.jpg.webp",
+        "category": "History",
         "questions": [
             {
                 "question": "The president of the United States during most of World War Two was... (Hint: He died in office.)",
@@ -263,7 +267,8 @@
     },
     {
         "title": "Analogy vs Metaphor: Can You Pick Correctly?",
-        "image": "https://files.brainfall.com/wp-content/uploads/2021/01/analogy_vs_metaphor_can_you_pick_correctly-300x0.jpg.webp",
+        "image": "https://files.brainfall.com/wp-content/uploads/2021/01/analogy_vs_metaphor_can_you_pick_correctly-936x0.jpg.webp",
+        "category": "Language",
         "questions": [
             {
                 "question": "Ogres are like onions because they have layers.",
@@ -324,7 +329,8 @@
     },
     {
         "title": "Do You Know What These Famous English Proverbs Mean?",
-        "image": "https://files.brainfall.com/wp-content/uploads/2021/02/do_you_know_these_famous_english_proverbs_mean_featured-300x0.jpg.webp",
+        "image": "https://files.brainfall.com/wp-content/uploads/2021/02/do_you_know_these_famous_english_proverbs_mean_featured-936x0.jpg.webp",
+        "category": "Language",
         "questions": [
             {
                 "question": "Which of these other proverbs is closest in meaning to the following proverb? Better late than never.",
@@ -390,7 +396,8 @@
     },
     {
         "title": "Did These Events Happen in 1920 or 2020?",
-        "image": "https://files.brainfall.com/wp-content/uploads/2021/01/did_these_bad_events_happen_in_1920_or_2020-1-300x0.jpg.webp",
+        "category": "History",
+        "image": "https://files.brainfall.com/wp-content/uploads/2021/01/did_these_bad_events_happen_in_1920_or_2020-1-936x0.jpg.webp",
         "questions": [
             {
                 "question": "Mother Nature's embrace isn't so loving. Among other natural disasters, Louisiana experiences a hurricane with record-tying winds (matching the Great Storm of 1856).",
@@ -456,7 +463,8 @@
     },
     {
         "title": "Can You Name The Car Brand Based On The Logo?",
-        "image": "https://files.brainfall.com/wp-content/uploads/2017/04/can_you_name_the_car_brand_based_on_the_logo_featured_large-300x0.jpg.webp",
+        "image": "https://files.brainfall.com/wp-content/uploads/2017/04/can_you_name_the_car_brand_based_on_the_logo_featured_large-936x0.jpg.webp",
+        "category": "General Knowledge",
         "questions": [
             {
                 "question": "",
@@ -578,7 +586,8 @@
     },
     {
         "title": "How Much Basic French Do You Know?",
-        "image": "https://files.brainfall.com/wp-content/uploads/2017/05/how_much_basic_french_do_you_know_featured_large-300x0.jpg.webp",
+        "image": "https://files.brainfall.com/wp-content/uploads/2017/05/how_much_basic_french_do_you_know_featured_large-936x0.jpg.webp",
+        "category": "Language",
         "questions": [
             {
                 "question": "What is 'le petit déjeuner'?",

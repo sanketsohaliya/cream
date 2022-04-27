@@ -1,5 +1,5 @@
 <template>
-    <section class="text-gray-600">
+    <section>
         <div class="container mx-auto">
             <div class="flex flex-wrap mx-3">
                 <QuizThumbnail id="0" />

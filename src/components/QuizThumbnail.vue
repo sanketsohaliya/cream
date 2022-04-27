@@ -5,11 +5,10 @@
         }">
             <div class="h-full rounded-xl shadow-cla-blue bg-white overflow-hidden">
                 <img class="h-48 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
-                    :src="quizStore.quiz.image" alt="blog">
+                    :src="quizStore.quiz.image" alt="Quiz Thumbnail">
                 <div class="p-5">
-                    <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY-1</h2>
-                    <h1 class="title-font text-lg font-medium mb-3">The Catalyzer</h1>
-                    <p class="leading-relaxed mb-3">{{ quizStore.quiz.title }}</p>
+                    <div class="tracking-widest text-sm text-gray-500 mb-1">{{ quizStore.quiz.category }}</div>
+                    <div class="leading-relaxed text-lg mb-3">{{ quizStore.quiz.title }}</div>
                 </div>
             </div>
         </router-link>
