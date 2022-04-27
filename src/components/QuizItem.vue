@@ -4,8 +4,8 @@
 			<div class="text-center">
 				<h1 class="text-xl font-semibold">{{ quizStore.getCurrentQuestion.question }}</h1>
 			</div>
-			<div class="flex justify-center items-center m-7">
-				<img class="w-96 rounded-xl shadow-lg" :src="quizStore.quiz.image" alt="blog" />
+			<div class="flex justify-center items-center m-7" v-if="quizStore.getCurrentQuestion.image">
+				<img class="w-96 rounded-xl shadow-lg" :src="quizStore.getCurrentQuestion.image" alt="blog" />
 			</div>
 			<div class="mb-7">
 				<label v-for="(option, index) in quizStore.getCurrentQuestion.options" :for="'option' + index"
