@@ -13,7 +13,6 @@ export const useQuizStore = defineStore({
             let value = 0
             state.quiz.questions.map(q => {
                 if (q.selected != null && q.answer == q.selected) {
-                    console.log('correct');
                     value++
                 }
             })
@@ -32,7 +31,7 @@ export const useQuizStore = defineStore({
                 .then(json => this.userData = json)
         },
         getQuiz(id) {
-            this.quiz = quizzes[id];
+            this.quiz = quizzes[id]
         },
         setAnswer(e) {
             this.quiz.questions[this.currentQuestion].selected = e.target.value
@@ -44,6 +43,13 @@ export const useQuizStore = defineStore({
                 return
             }
             this.quizCompleted = true
+        },
+        reset() {
+            this.quizCompleted = false
+            this.currentQuestion = 0
+            this.quiz.questions.forEach(q => {
+                q.selected = null
+            })
         }
     }
 })

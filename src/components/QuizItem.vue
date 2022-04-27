@@ -41,14 +41,29 @@
 									: 'Next question'
 					}}
 				</button>
-				<span class="text-xl font-semibold mr-4">Score {{ quizStore.score }}/{{ quizStore.quiz.questions.length }}</span>
+				<span class="text-xl font-semibold mr-4">Score {{ quizStore.score }}/{{ quizStore.quiz.questions.length
+				}}</span>
 			</div>
 		</section>
 
-		<section class="p-3 m-5 rounded-md bg-white" v-else>
-
-			<h2>You have finished the quiz!</h2>
-			<p>Your score is {{ quizStore.score }}/{{ quizStore.quiz.questions.length }}</p>
+		<section class="p-3 m-5 rounded-md bg-white text-center" v-else>
+			<h2 class="text-2xl">Score</h2>
+			<p class="m-5">{{ quizStore.score }}/{{ quizStore.quiz.questions.length }}</p>
+			<router-link @click="quizStore.reset(id)" :to="{
+				path: '/quiz/' + id
+			}" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">
+				Try Again!
+			</router-link>
+			<div class="container mx-auto">
+				<div class="flex flex-wrap mx-3">
+					<QuizThumbnail id="5" />
+					<QuizThumbnail id="2" />
+					<QuizThumbnail id="7" />
+					<QuizThumbnail id="1" />
+					<QuizThumbnail id="3" />
+					<QuizThumbnail id="8" />
+				</div>
+			</div>
 		</section>
 	</main>
 </template>
@@ -56,6 +71,7 @@
 <script setup>
 import { useRoute } from "vue-router"
 import { useQuizStore } from '@/stores/quiz'
+import QuizThumbnail from '@/components/QuizThumbnail.vue'
 const route = useRoute()
 const id = route.params.id
 const quizStore = useQuizStore()
