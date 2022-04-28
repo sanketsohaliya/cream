@@ -49,8 +49,8 @@
 		<section class="p-3 m-5 rounded-md bg-white text-center" v-else>
 			<h2 class="text-2xl">Score</h2>
 			<p class="m-5">{{ quizStore.score }}/{{ quizStore.quiz.questions.length }}</p>
-			<router-link @click="quizStore.reset(id)" :to="{
-				path: '/quiz/' + id
+			<router-link @click="quizStore.reset()" :to="{
+				path: '/quiz/' + routeId
 			}" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">
 				Try Again!
 			</router-link>
@@ -61,7 +61,7 @@
 					<QuizThumbnail id="7" />
 					<QuizThumbnail id="1" />
 					<QuizThumbnail id="3" />
-					<QuizThumbnail id="8" />
+					<QuizThumbnail id="0" />
 				</div>
 			</div>
 		</section>
@@ -73,7 +73,7 @@ import { useRoute } from "vue-router"
 import { useQuizStore } from '@/stores/quiz'
 import QuizThumbnail from '@/components/QuizThumbnail.vue'
 const route = useRoute()
-const id = route.params.id
+const routeId = route.params.id
 const quizStore = useQuizStore()
-quizStore.getQuiz(id)
+quizStore.getQuiz(routeId)
 </script>
