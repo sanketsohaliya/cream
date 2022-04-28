@@ -2,7 +2,7 @@
     <section>
         <div class="container mx-auto">
             <div class="flex flex-wrap mx-3">
-                <QuizThumbnail id="0" />
+                <QuizThumbnail id="8" />
                 <QuizThumbnail id="1" />
                 <QuizThumbnail id="2" />
                 <QuizThumbnail id="3" />
@@ -10,7 +10,7 @@
                 <QuizThumbnail id="5" />
                 <QuizThumbnail id="6" />
                 <QuizThumbnail id="7" />
-                <QuizThumbnail id="8" />
+                <QuizThumbnail id="0" />
             </div>
         </div>
     </section>

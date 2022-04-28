@@ -31,6 +31,7 @@ export const useQuizStore = defineStore({
                 .then(json => this.userData = json)
         },
         getQuiz(id) {
+            this.currentQuestion = 0
             this.quiz = quizzes[id]
         },
         setAnswer(e) {
@@ -44,12 +45,17 @@ export const useQuizStore = defineStore({
             }
             this.quizCompleted = true
         },
-        reset() {
+        reset(id) {
+            this.currentQuestion = -1
             this.quizCompleted = false
-            this.currentQuestion = 0
-            this.quiz.questions.forEach(q => {
+            this.quiz = quizzes[id]
+            quizzes[id].questions.forEach(q => {
                 q.selected = null
             })
+        },
+        again(id) {
+            this.reset(id)
+            this.currentQuestion = 0
         }
     }
 })

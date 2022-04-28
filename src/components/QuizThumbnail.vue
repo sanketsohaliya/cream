@@ -1,6 +1,6 @@
 <template>
     <div class="p-5 md:w-1/3">
-        <router-link :to="{
+        <router-link @click="quizStore.reset(id)" :to="{
             path: '/quiz/' + id
         }">
             <div class="h-full rounded-xl shadow-cla-blue bg-white overflow-hidden">
