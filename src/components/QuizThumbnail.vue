@@ -16,7 +16,12 @@
 </template>
 <script setup>
 import { useQuizStore } from '@/stores/quiz'
-const props = defineProps(['id'])
+const props = defineProps({
+  id: {
+      type: Number,
+      required: true
+  }
+})
 const quizStore = useQuizStore()
 quizStore.getQuiz(props.id)
 </script>
