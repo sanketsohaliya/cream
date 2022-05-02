@@ -8,7 +8,6 @@ export const useQuizStore = defineStore({
         currentQuestion: 0
     }),
     getters: {
-        doubleCount: (state) => state.counter * 2,
         score: (state) => {
             let value = 0
             state.quiz.questions.map(q => {
