@@ -31,9 +31,8 @@ export const useQuizStore = defineStore({
                 .then(json => this.userData = json)
         },
         getQuiz(id) {
-            this.currentQuestion = 0
             this.currentQuiz = quizzes[id]
-            return this.currentQuiz
+            this.currentQuestion = 0
         },
         getThumbnail(thumbnailId) {
             return quizzes[thumbnailId]
