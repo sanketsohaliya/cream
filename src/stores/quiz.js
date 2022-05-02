@@ -33,6 +33,10 @@ export const useQuizStore = defineStore({
         getQuiz(id) {
             this.currentQuiz = quizzes[id]
             this.currentQuestion = 0
+            this.quizCompleted = false
+            quizzes[id].questions.forEach(q => {
+                q.selected = null
+            })
         },
         getThumbnail(thumbnailId) {
             return quizzes[thumbnailId]

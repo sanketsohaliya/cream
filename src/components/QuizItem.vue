@@ -49,11 +49,7 @@
 		<section class="p-3 m-5 rounded-md bg-white text-center" v-else>
 			<h2 class="text-2xl">Score</h2>
 			<p class="m-5">{{ quizStore.score }}/{{ quizStore.currentQuiz.questions.length }}</p>
-			<router-link @click="quizStore.reset(id)" :to="{
-				path: '/quiz/' + id
-			}" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">
-				Try Again!
-			</router-link>
+			<button @click="quizStore.getQuiz(id)" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">Try Again!</button>
 			<div class="container mx-auto">
 				<div class="flex flex-wrap mx-3">
 					<QuizThumbnail :thumbnailId="5" />
