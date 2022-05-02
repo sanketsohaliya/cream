@@ -34,7 +34,7 @@ export const useQuizStore = defineStore({
             this.currentQuiz = quizzes[id]
             this.currentQuestion = 0
             this.quizCompleted = false
-            quizzes[id].questions.forEach(q => {
+            this.currentQuiz.questions.forEach(q => {
                 q.selected = null
             })
         },
@@ -51,14 +51,6 @@ export const useQuizStore = defineStore({
                 return
             }
             this.quizCompleted = true
-        },
-        reset(id) {
-            this.currentQuiz = quizzes[id]
-            this.currentQuestion = 0
-            this.quizCompleted = false
-            quizzes[id].questions.forEach(q => {
-                q.selected = null
-            })
         }
     }
 })
