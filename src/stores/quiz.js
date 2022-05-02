@@ -1,3 +1,4 @@
+import { isSet } from '@vue/shared';
 import { defineStore } from 'pinia'
 import quizzes from './quizzes.json';
 
@@ -6,7 +7,7 @@ export const useQuizStore = defineStore({
     state: () => ({
         quizCompleted: false,
         currentQuestion: 0,
-        currentQuiz: 0
+        currentQuiz: quizzes[0]
     }),
     getters: {
         score: (state) => {
