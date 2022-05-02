@@ -1,7 +1,7 @@
 <template>
     <div class="p-5 md:w-1/3">
-        <router-link @click="quizStore.reset(quizId)" :to="{
-            path: '/quiz/' + quizId
+        <router-link @click="quizStore.reset(thumbnailId)" :to="{
+            path: '/quiz/' + thumbnailId
         }">
             <div class="h-full rounded-xl shadow-cla-blue bg-white overflow-hidden">
                 <img class="h-48 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
@@ -17,11 +17,11 @@
 <script setup>
 import { useQuizStore } from '@/stores/quiz'
 const props = defineProps({
-  quizId: {
+  thumbnailId: {
       type: Number,
       required: true
   }
 })
 const quizStore = useQuizStore()
-const quiz = quizStore.getThumbnail(props.quizId)
+const quiz = quizStore.getThumbnail(props.thumbnailId)
 </script>
