@@ -35,6 +35,9 @@ export const useQuizStore = defineStore({
             this.currentQuiz = quizzes[id]
             return this.currentQuiz
         },
+        getThumbnail(id) {
+            return quizzes[id]
+        },
         setAnswer(e) {
             this.currentQuiz.questions[this.currentQuestion].selected = e.target.value
             e.target.value = null

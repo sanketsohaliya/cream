@@ -23,5 +23,5 @@ const props = defineProps({
   }
 })
 const quizStore = useQuizStore()
-const quiz = quizStore.getQuiz(props.quizId)
+const quiz = quizStore.getThumbnail(props.quizId)
 </script>
