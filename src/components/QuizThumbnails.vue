@@ -2,15 +2,15 @@
     <section>
         <div class="container mx-auto">
             <div class="flex flex-wrap mx-3">
-                <QuizThumbnail id="8" />
-                <QuizThumbnail id="1" />
-                <QuizThumbnail id="2" />
-                <QuizThumbnail id="3" />
-                <QuizThumbnail id="4" />
-                <QuizThumbnail id="5" />
-                <QuizThumbnail id="6" />
-                <QuizThumbnail id="7" />
-                <QuizThumbnail id="0" />
+                <QuizThumbnail quizId="8" />
+                <QuizThumbnail quizId="1" />
+                <QuizThumbnail quizId="2" />
+                <QuizThumbnail quizId="3" />
+                <QuizThumbnail quizId="4" />
+                <QuizThumbnail quizId="5" />
+                <QuizThumbnail quizId="6" />
+                <QuizThumbnail quizId="7" />
+                <QuizThumbnail quizId="0" />
             </div>
         </div>
     </section>

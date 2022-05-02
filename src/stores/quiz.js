@@ -5,12 +5,13 @@ export const useQuizStore = defineStore({
     id: 'quiz',
     state: () => ({
         quizCompleted: false,
-        currentQuestion: 0
+        currentQuestion: 0,
+        currentQuiz: 0
     }),
     getters: {
         score: (state) => {
             let value = 0
-            state.quiz.questions.map(q => {
+            state.currentQuiz.questions.map(q => {
                 if (q.selected != null && q.answer == q.selected) {
                     value++
                 }
@@ -18,7 +19,7 @@ export const useQuizStore = defineStore({
             return value
         },
         getCurrentQuestion: (state) => {
-            let question = state.quiz.questions[state.currentQuestion]
+            let question = state.currentQuiz.questions[state.currentQuestion]
             question.index = state.currentQuestion
             return question
         }
@@ -31,23 +32,24 @@ export const useQuizStore = defineStore({
         },
         getQuiz(id) {
             this.currentQuestion = 0
-            this.quiz = quizzes[id]
+            this.currentQuiz = quizzes[id]
+            return this.currentQuiz
         },
         setAnswer(e) {
-            this.quiz.questions[this.currentQuestion].selected = e.target.value
+            this.currentQuiz.questions[this.currentQuestion].selected = e.target.value
             e.target.value = null
         },
         nextQuestion() {
-            if (this.currentQuestion < this.quiz.questions.length - 1) {
+            if (this.currentQuestion < this.currentQuiz.questions.length - 1) {
                 this.currentQuestion++
                 return
             }
             this.quizCompleted = true
         },
         reset(id) {
+            this.currentQuiz = quizzes[id]
             this.currentQuestion = -1
             this.quizCompleted = false
-            this.quiz = quizzes[id]
             quizzes[id].questions.forEach(q => {
                 q.selected = null
             })

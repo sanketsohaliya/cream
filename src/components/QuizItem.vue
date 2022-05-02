@@ -2,7 +2,7 @@
 	<main>
 		<section class="p-3 m-5 rounded-md bg-white" v-if="!quizStore.quizCompleted">
 			<div class="text-center">
-				<h1 class="text-gray-500">{{ quizStore.quiz.title }}</h1>
+				<h1 class="text-gray-500">{{ quizStore.currentQuiz.title }}</h1>
 			</div>
 			<div class="text-center">
 				<h1 class="text-xl font-semibold mt-5">{{ quizStore.getCurrentQuestion.question }}</h1>
@@ -34,21 +34,21 @@
 				<button @click="quizStore.nextQuestion" :disabled="!quizStore.getCurrentQuestion.selected"
 					class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">
 					{{
-							quizStore.getCurrentQuestion.index == quizStore.quiz.questions.length - 1
+							quizStore.getCurrentQuestion.index == quizStore.currentQuiz.questions.length - 1
 								? 'Finish'
 								: quizStore.getCurrentQuestion.selected == null
 									? 'Select an option'
 									: 'Next question'
 					}}
 				</button>
-				<span class="text-xl font-semibold mr-4">Score {{ quizStore.score }}/{{ quizStore.quiz.questions.length
+				<span class="text-xl font-semibold mr-4">Score {{ quizStore.score }}/{{ quizStore.currentQuiz.questions.length
 				}}</span>
 			</div>
 		</section>
 
 		<section class="p-3 m-5 rounded-md bg-white text-center" v-else>
 			<h2 class="text-2xl">Score</h2>
-			<p class="m-5">{{ quizStore.score }}/{{ quizStore.quiz.questions.length }}</p>
+			<p class="m-5">{{ quizStore.score }}/{{ quizStore.currentQuiz.questions.length }}</p>
 			<router-link @click="quizStore.again(id)" :to="{
 				path: '/quiz/' + id
 			}" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">
@@ -56,12 +56,12 @@
 			</router-link>
 			<div class="container mx-auto">
 				<div class="flex flex-wrap mx-3">
-					<QuizThumbnail id="5" />
-					<QuizThumbnail id="2" />
-					<QuizThumbnail id="7" />
-					<QuizThumbnail id="1" />
-					<QuizThumbnail id="3" />
-					<QuizThumbnail id="0" />
+					<QuizThumbnail quizId="5" />
+					<QuizThumbnail quizId="2" />
+					<QuizThumbnail quizId="7" />
+					<QuizThumbnail quizId="1" />
+					<QuizThumbnail quizId="3" />
+					<QuizThumbnail quizId="2" />
 				</div>
 			</div>
 		</section>
