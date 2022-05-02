@@ -49,7 +49,7 @@
 		<section class="p-3 m-5 rounded-md bg-white text-center" v-else>
 			<h2 class="text-2xl">Score</h2>
 			<p class="m-5">{{ quizStore.score }}/{{ quizStore.currentQuiz.questions.length }}</p>
-			<router-link @click="quizStore.again(id)" :to="{
+			<router-link @click="quizStore.reset(id)" :to="{
 				path: '/quiz/' + id
 			}" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">
 				Try Again!
@@ -61,7 +61,10 @@
 					<QuizThumbnail :thumbnailId="7" />
 					<QuizThumbnail :thumbnailId="1" />
 					<QuizThumbnail :thumbnailId="3" />
-					<QuizThumbnail :thumbnailId="2" />
+					<QuizThumbnail :thumbnailId="0" />
+					<QuizThumbnail :thumbnailId="4" />
+					<QuizThumbnail :thumbnailId="6" />
+					<QuizThumbnail :thumbnailId="8" />
 				</div>
 			</div>
 		</section>
