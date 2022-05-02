@@ -21,6 +21,7 @@ export const useQuizStore = defineStore({
         },
         getCurrentQuestion: (state) => {
             let question = state.currentQuiz.questions[state.currentQuestion]
+            question.index = state.currentQuestion
             return question
         }
     },
