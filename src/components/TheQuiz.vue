@@ -49,7 +49,7 @@
 		<section class="p-3 m-5 rounded-md bg-white text-center" v-else>
 			<h2 class="text-2xl">Score</h2>
 			<p class="m-5">{{ quizStore.score }}/{{ quizStore.currentQuiz.questions.length }}</p>
-			<button @click="quizStore.getQuiz($route.params.id)" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">Try Again!</button>
+			<button @click="quizStore.getQuiz(routeId)" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">Try Again!</button>
 			<div class="container mx-auto">
 				<div class="flex flex-wrap mx-3">
 					<QuizThumbnail :thumbnailId="5" />
@@ -68,10 +68,14 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import { useQuizStore } from '@/stores/quiz'
 import QuizThumbnail from '@/components/QuizThumbnail.vue'
-import { useRoute } from 'vue-router'
 const quizStore = useQuizStore()
 const route = useRoute()
-quizStore.getQuiz(route.params.id)
+const routeId = computed(() => {
+	return parseInt(route.params.id)
+})
+quizStore.getQuiz(routeId.value)
 </script>
