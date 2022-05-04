@@ -1,7 +1,7 @@
 <template>
-  <QuizItem />
+  <TheQuiz />
 </template>
 
 <script setup>
-import QuizItem from '@/components/QuizItem.vue'
+import TheQuiz from '@/components/TheQuiz.vue'
 </script>
