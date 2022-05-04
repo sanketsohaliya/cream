@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import quizzes from './quizzes.json';
+import quizzes from '@/data/quizzes.json';
 
 export const useQuizStore = defineStore({
     id: 'quiz',
