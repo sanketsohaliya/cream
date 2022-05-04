@@ -50,20 +50,8 @@
 			<h2 class="text-2xl">Score</h2>
 			<p class="m-5">{{ quizStore.score }}/{{ quizStore.currentQuiz.questions.length }}</p>
 			<button @click="quizStore.getQuiz(routeId)" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">Try Again!</button>
-			<div class="container mx-auto">
-				<div class="flex flex-wrap mx-3">
-					<QuizThumbnail :thumbnailId="5" />
-					<QuizThumbnail :thumbnailId="2" />
-					<QuizThumbnail :thumbnailId="7" />
-					<QuizThumbnail :thumbnailId="1" />
-					<QuizThumbnail :thumbnailId="3" />
-					<QuizThumbnail :thumbnailId="0" />
-					<QuizThumbnail :thumbnailId="4" />
-					<QuizThumbnail :thumbnailId="6" />
-					<QuizThumbnail :thumbnailId="8" />
-				</div>
-			</div>
 		</section>
+		<QuizThumbnails />
 	</main>
 </template>
 
@@ -71,7 +59,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useQuizStore } from '@/stores/quiz'
-import QuizThumbnail from '@/components/QuizThumbnail.vue'
+import QuizThumbnails from '@/components/QuizThumbnails.vue'
 const quizStore = useQuizStore()
 const route = useRoute()
 const routeId = computed(() => {
