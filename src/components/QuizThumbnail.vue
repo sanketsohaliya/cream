@@ -1,5 +1,5 @@
 <template>
-    <div class="p-5 md:w-1/3" v-if="quizStore.quizzes.length > 0">
+    <div class="p-5 md:w-1/3" v-if="!quizStore.isEmpty">
         <router-link @click="quizStore.getQuiz(thumbnailId)" :to="{
             path: '/quiz/' + thumbnailId
         }">

@@ -9,6 +9,9 @@ export const useQuizStore = defineStore({
         currentQuiz: {}
     }),
     getters: {
+        isEmpty: (state) => {
+            return state.quizzes.length == 0
+        },
         score: (state) => {
             let value = 0
             state.currentQuiz.questions.map(q => {
@@ -27,6 +30,7 @@ export const useQuizStore = defineStore({
     actions: {
         async getRandomQuizzes() {
             this.quizzes = (await import("@/data/quizzes.json")).default
+            // this.quizzes = (await axios.get(https://quizways.com/api/get-random-quizzes)).data
         },
         getQuiz(id) {
             this.currentQuiz = this.quizzes[id]
