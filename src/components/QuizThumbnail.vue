@@ -1,7 +1,8 @@
 <template>
     <div class="p-5 md:w-1/3" v-if="!quizStore.isEmpty">
         <router-link @click="quizStore.getQuiz(thumbnailId)" :to="{
-            path: '/quiz/' + thumbnailId
+            name: 'quiz.show',
+            params: {id: thumbnailId}
         }">
             <div class="h-full rounded-xl shadow-cla-blue bg-white overflow-hidden">
                 <img class="h-48 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100"
