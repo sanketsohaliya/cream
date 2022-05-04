@@ -4,11 +4,16 @@
       <img src="@/assets/logo.png" class="h-16" alt="Cream Logo" />
     </router-link>
   </nav>
-  <RouterView />
+  <div class="container mx-auto">
+    <RouterView />
+  </div>  
 </template>
 
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import { useQuizStore } from '@/stores/quiz'
+const quizStore = useQuizStore()
+quizStore.getRandomQuizzes()
 </script>
 
 <style>

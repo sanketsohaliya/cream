@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<section class="p-3 m-5 rounded-md bg-white" v-if="!quizStore.quizCompleted">
+		<section class="p-3 m-7 rounded-md bg-white" v-if="!quizStore.quizCompleted">
 			<div class="text-center">
 				<h1 class="text-gray-500">{{ quizStore.currentQuiz.title }}</h1>
 			</div>
