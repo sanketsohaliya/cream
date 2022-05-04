@@ -27,8 +27,21 @@ export const useQuizStore = defineStore({
     },
     actions: {
         async getRandomQuizzes() {
-            this.quizzes = (await import("@/data/quizzes.json")).default
             // this.quizzes = (await axios.get(https://quizways.com/api/get-random-quizzes)).data
+            this.quizzes = (await import("@/data/quizzes.json")).default
+            this.shuffle()
+        },
+        shuffle() {
+            let currentIndex = this.quizzes.length,  randomIndex;
+            // While there remain elements to shuffle.
+            while (currentIndex != 0) {
+                // Pick a remaining element.
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                // And swap it with the current element.
+                [this.quizzes[currentIndex], this.quizzes[randomIndex]] = [
+                this.quizzes[randomIndex], this.quizzes[currentIndex]];
+            }
         },
         getQuiz(id) {
             this.currentQuiz = this.quizzes[id]
