@@ -16,7 +16,7 @@
 </template>
 <script setup>
 import { useQuizStore } from '@/stores/quiz'
-const props = defineProps({
+defineProps({
   thumbnailId: {
       type: Number,
       required: true
