@@ -65,5 +65,5 @@ const route = useRoute()
 const routeId = computed(() => {
 	return parseInt(route.params.id)
 })
-// quizStore.getQuiz(routeId.value)
+quizStore.getQuiz(routeId.value)
 </script>

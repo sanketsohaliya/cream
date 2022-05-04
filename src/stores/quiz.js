@@ -29,7 +29,7 @@ export const useQuizStore = defineStore({
         async getRandomQuizzes() {
             // this.quizzes = (await axios.get(https://quizways.com/api/get-random-quizzes)).data
             this.quizzes = (await import("@/data/quizzes.json")).default
-            this.shuffle()
+            // this.shuffle()
         },
         shuffle() {
             let currentIndex = this.quizzes.length,  randomIndex;
