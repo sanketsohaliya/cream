@@ -1,12 +1,13 @@
 import { defineStore } from 'pinia'
-import quizzes from '@/data/quizzes.json';
+import quizzez from '@/data/quizzes.json';
 
 export const useQuizStore = defineStore({
     id: 'quiz',
     state: () => ({
+        quizzes: [],
         quizCompleted: false,
         currentQuestion: 0,
-        currentQuiz: quizzes[0]
+        currentQuiz: {}
     }),
     getters: {
         score: (state) => {
@@ -25,13 +26,16 @@ export const useQuizStore = defineStore({
         }
     },
     actions: {
+        getRandomQuizzes() {
+            this.quizzes = quizzez
+        },
         getUser() {
             fetch('https://jsonplaceholder.typicode.com/todos/1')
                 .then(response => response.json())
                 .then(json => this.userData = json)
         },
         getQuiz(id) {
-            this.currentQuiz = quizzes[id]
+            this.currentQuiz = this.quizzes[id]
             this.currentQuestion = 0
             this.quizCompleted = false
             this.currentQuiz.questions.forEach(q => {
@@ -39,7 +43,7 @@ export const useQuizStore = defineStore({
             })
         },
         getThumbnail(thumbnailId) {
-            return quizzes[thumbnailId]
+            return this.quizzes[thumbnailId]
         },
         setAnswer(e) {
             this.currentQuiz.questions[this.currentQuestion].selected = e.target.value
