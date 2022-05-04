@@ -9,7 +9,7 @@ export const useQuizStore = defineStore({
         currentQuiz: {}
     }),
     getters: {
-        isEmpty: (state) => state.quizzes.length == 0,
+        isEmpty: (state) => state.quizzes.length === 0,
         score: (state) => {
             let value = 0
             state.currentQuiz.questions.map(q => {
