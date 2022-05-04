@@ -1,8 +1,8 @@
 <template>
   <nav class="bg-white shadow-md">
-    <RouterLink to="/" class="flex justify-center items-center">
+    <router-link to="/" class="flex justify-center items-center">
       <img src="@/assets/logo.png" class="h-16" alt="Cream Logo" />
-    </RouterLink>
+    </router-link>
   </nav>
   <RouterView />
 </template>
