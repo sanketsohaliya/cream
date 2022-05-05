@@ -49,7 +49,7 @@
 		<section class="p-3 m-5 rounded-md bg-white text-center" v-else>
 			<h2 class="text-2xl">Score</h2>
 			<p class="m-5">{{ quizStore.score }}/{{ quizStore.currentQuiz.questions.length }}</p>
-			<button @click="quizStore.reset(routeId)" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">Try Again!</button>
+			<button @click="quizStore.reset(id)" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">Try Again!</button>
 		</section>
 		<QuizThumbnails />
 	</main>
@@ -60,11 +60,10 @@ import { useQuizStore } from '@/stores/quiz'
 import QuizThumbnails from '@/components/QuizThumbnails.vue'
 const props = defineProps({
 	id: {
-		type: String,
+		type: Number,
 		required: true
 	}	
 })
 const quizStore = useQuizStore()
-const routeId = parseInt(props.id)
-quizStore.reset(routeId)
+quizStore.reset(props.id)
 </script>
