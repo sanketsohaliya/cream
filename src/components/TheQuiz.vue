@@ -56,14 +56,15 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
 import { useQuizStore } from '@/stores/quiz'
 import QuizThumbnails from '@/components/QuizThumbnails.vue'
-const quizStore = useQuizStore()
-const route = useRoute()
-const routeId = computed(() => {
-	return parseInt(route.params.id)
+const props = defineProps({
+	id: {
+		type: String,
+		required: true
+	}	
 })
-quizStore.reset(routeId.value)
+const quizStore = useQuizStore()
+const routeId = parseInt(props.id)
+quizStore.reset(routeId)
 </script>
