@@ -5,8 +5,12 @@
     </router-link>
   </nav>
   <div class="container mx-auto">
-    <router-view :key="$route.path"></router-view>
-  </div>  
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" :key="$route.path"></component>
+      </transition>
+    </router-view>
+  </div>
 </template>
 
 <script setup>
@@ -18,4 +22,14 @@ quizStore.getRandomQuizzes()
 
 <style>
 @import '@/assets/base.css';
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
