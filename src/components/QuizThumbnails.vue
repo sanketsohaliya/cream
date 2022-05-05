@@ -2,7 +2,7 @@
     <section>
         <div v-if="!quizStore.isEmpty" class="flex flex-wrap mx-3">
             <div v-for="(quiz, id) in quizStore.quizzes" :key="id" class="p-5 md:w-1/3">
-                <router-link @click="quizStore.getQuiz(id)" :to="{
+                <router-link :to="{
                     name: 'quiz.show',
                     params: { id: id }
                 }">

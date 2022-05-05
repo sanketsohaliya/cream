@@ -49,7 +49,7 @@
 		<section class="p-3 m-5 rounded-md bg-white text-center" v-else>
 			<h2 class="text-2xl">Score</h2>
 			<p class="m-5">{{ quizStore.score }}/{{ quizStore.currentQuiz.questions.length }}</p>
-			<button @click="quizStore.getQuiz(routeId)" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">Try Again!</button>
+			<button @click="quizStore.reset(routeId)" class="px-7 py-3 text-xl font-semibold bg-yellow-200 rounded-md cursor-pointer disabled:opacity-50">Try Again!</button>
 		</section>
 		<QuizThumbnails />
 	</main>
@@ -65,5 +65,5 @@ const route = useRoute()
 const routeId = computed(() => {
 	return parseInt(route.params.id)
 })
-quizStore.getQuiz(routeId.value)
+quizStore.reset(routeId.value)
 </script>

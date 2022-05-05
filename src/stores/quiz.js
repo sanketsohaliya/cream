@@ -43,7 +43,7 @@ export const useQuizStore = defineStore({
                 this.quizzes[randomIndex], this.quizzes[currentIndex]];
             }
         },
-        getQuiz(id) {
+        reset(id) {
             this.currentQuiz = this.quizzes[id]
             this.currentQuestion = 0
             this.quizCompleted = false

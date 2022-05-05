@@ -5,7 +5,7 @@
     </router-link>
   </nav>
   <div class="container mx-auto">
-    <RouterView />
+    <router-view :key="$route.path"></router-view>
   </div>  
 </template>
 
