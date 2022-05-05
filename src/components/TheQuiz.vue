@@ -1,8 +1,8 @@
 <template>
 	<main>
 		<section class="m-7 rounded-md bg-white">
-			<div class="overflow-hidden h-7 -mt-1 mb-7 flex bg-blue-200">
-				<div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-700"
+			<div class="overflow-hidden h-5 -mt-1 mb-3 flex bg-blue-200">
+				<div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-cyan-500 to-blue-500"
 					:style="`width: ${width}`">
 				</div>
 			</div>
@@ -77,6 +77,9 @@ const props = defineProps({
 const quizStore = useQuizStore()
 quizStore.reset(props.id)
 const width = computed(() => {
-	return ((quizStore.getCurrentQuestion.index + 1) / quizStore.currentQuiz.questions.length) * 100 + "%"
+	if(quizStore.quizCompleted) {
+		return "100%"
+	}
+	return (quizStore.getCurrentQuestion.index / quizStore.currentQuiz.questions.length) * 100 + "%"
 })
 </script>
