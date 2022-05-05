@@ -3,7 +3,17 @@ import HomeView from '@/views/HomeView.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomeView },
-  { path: '/quiz/:id', name: 'quiz.show', component: () => import('@/views/QuizView.vue'), props: route => ({...route.params, id: parseInt(route.params.id) }) }
+  { 
+    path: '/quiz/:id',
+    name: 'quiz.show',
+    component: () => import('@/views/QuizView.vue'),
+    props: route => ({ ...route.params, id: parseInt(route.params.id) })
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('@/views/NotFound.vue')
+  }
 ]
 
 const router = createRouter({

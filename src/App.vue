@@ -6,7 +6,7 @@
   </nav>
   <div class="container mx-auto">
     <router-view v-slot="{ Component }">
-      <transition name="fade" mode="out-in">
+      <transition name="fade">
         <component :is="Component" :key="$route.path"></component>
       </transition>
     </router-view>
@@ -25,11 +25,12 @@ quizStore.getRandomQuizzes()
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s;
+  transition: all 0.5s ease;
 }
 
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+  transform: translateX(30px);
 }
 </style>
